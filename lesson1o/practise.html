@@ -1,0 +1,72 @@
+<body>
+    <h1>my food menu</h1>
+<p>pick your favorite dish and dig in!</p>
+
+<ul>
+    <li>pizza</li>
+    <li>burger</li>
+    <li>tacos-chef's special</li>
+    <li>noodles</li>
+    <li>icecream</li>
+</ul>
+
+<p class="desc">every dish on this menu is made with love and loads of flavour. 
+    try them all and find your favourite!</p>
+
+<div class="links">
+    <a href="#">order now</a>
+    <a href="#">see more</a>
+</div>
+
+</body>
+
+<style>
+    body{
+        background-color: darkblue;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    h1{
+        color: orange;
+    }
+    h1 + p{
+        border-radius: 3px;
+        color: brown;
+    }
+    ul > li {
+        font-size: small;
+        color: brown;
+        width: 230px;
+        background-color: blue;
+        border-radius: 8px;
+     
+    }
+
+
+    ul li:nth-child(3) {
+        background-color: brown;
+        
+    color: orangered;
+
+    }
+
+    .desc::first-letter {
+        font-size: medium;
+   color: blue;
+   font-weight: bold;
+    }
+    a{
+        color: brown;
+        text-decoration: underline;
+        font-size: small;
+        border-radius: 5px;
+    }
+  
+  a:hover{
+    background-color: orangered;
+    color: antiquewhite;
+  }
+
+
+</style>
