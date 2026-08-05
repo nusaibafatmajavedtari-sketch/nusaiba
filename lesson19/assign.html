@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <style>
+        #h{
+            text-decoration: underline;
+        }
+        #p{
+            font-weight: bold;
+        }
+        body{
+            background-color: aqua;
+        }
+        #P{
+            font-weight: bold;
+        }
+    </style>
+    <h1 id="h"></h1>
+    <p id="p"></p>
+    <p id="2p"></p>
+    <p id="3p"></p>
+    <p id="4p"></p>
+    <p id="P"></p>
+    <p id="2P"></p>
+    <p id="3P"></p>
+    <p id="4P"></p>
+    <script>
+   document.getElementById("h").innerHTML= "Simple Calculator"
+   document.getElementById("p").innerHTML= "The sum of a few numbers are-" 
+   var x=2 , y=3;
+   var z= 5;
+   document.getElementById("2p").innerHTML= "the sum of two and three is" + " " + (x+y); 
+   document.getElementById("3p").innerHTML= "the sum of three and five is" + " " +(y+z);
+   document.getElementById("4p").innerHTML= "the sum of two and five is" + " " + (x+z);
+   
+   document.getElementById("P").innerHTML= "The product of a few numbers are-" 
+   document.getElementById("2P").innerHTML= "The product of two and three is" + " " + (x*y);
+   document.getElementById("3P").innerHTML= "The product of three and five is" + " " + (y*z);
+   document.getElementById("4P").innerHTML= "The product of two and five is" + " " + (x*z);
+ </script>
+</body>
+</html>
