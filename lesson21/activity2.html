@@ -1,0 +1,54 @@
+<!--
+1) Start the HTML document with `<!DOCTYPE html>` and open `<html>`.
+
+2) Inside the `<body>`:
+   a) Add a heading `<h2>` with text: "JavaScript For Loop".
+   b) Add an empty paragraph `<p id="demo"></p>` to display the output.
+
+3) Add a `<script>` tag to write JavaScript.
+
+4) Create an array named `fruits` with multiple fruit names.
+
+5) Create a variable `text` as an empty string:
+   a) This will store the final output.
+
+6) Use a `for` loop to go through the array:
+   a) Start `i` from 0.
+   b) Run the loop while `i < fruits.length`.
+   c) Increase `i` by 1 each time.
+
+7) Inside the loop:
+   a) Add each fruit name to `text`.
+   b) Add `"<br>"` after each fruit to print on a new line.
+
+8) After the loop, display the full text:
+   a) Use `document.getElementById("demo").innerHTML = text;`
+
+9) Close all tags properly.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2 id="h2"></h2>
+  <script>
+    var str=['football', 'basketball', 'chess', 'cricket',]
+    const h= document.getElementById("h2")
+    var text=""
+    console.log(str.length)
+    // h.innerHTML = str.length
+    for(i=0; i<str.length ; i++)
+    {
+      text += "<br>" + str[i] + "-" + i
+    }
+    h.innerHTML= text 
+  </script>  
+</body>
+</html>

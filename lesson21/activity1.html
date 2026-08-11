@@ -1,0 +1,54 @@
+<!--
+1) Start the HTML document with `<!DOCTYPE html>` and open `<html>`.
+
+2) Inside the `<body>`:
+   a) Add a heading `<h2>` with text: "JavaScript String Methods".
+   b) Add a paragraph `<p>` with text: "Basic Methods".
+
+3) Add a `<script>` tag to write JavaScript.
+
+4) Create a string variable:
+   a) `str = "AmAzInG"`
+
+5) Show basic string methods using `document.write()`:
+   a) Print `str.toUpperCase()` to convert to uppercase.
+   b) Print `<br>` to move to the next line.
+   c) Print `str.toLowerCase()` to convert to lowercase.
+   d) Print `<br>` again.
+   e) Print `str.startsWith('i')` to check if the string starts with 'i' (true/false).
+   f) Print `<br>` again.
+
+6) Test method using Regular Expression:
+   a) Create a string `str1 = "I learnt about Methods"`.
+   b) Create a pattern using `new RegExp("about")`.
+   c) Use `.test()` to check if the pattern exists in the string and store result in `res`.
+   d) Print `res` (true/false).
+
+7) Close all tags properly.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript string methods</h2>
+    <p>basic methods</p>
+    <p id="p"></p>
+    <script>
+       var str="AmAzInG"
+       // document.getElementById("p").innerHTML= str.toUpperCase() 
+        const p=document.getElementById("p") 
+        p.innerHTML= str.toUpperCase()
+        p.innerHTML+= str.toLowerCase()
+        p.innerHTML+= "<br>" + str.startsWith('i') 
+        var str1 = "I learnt about Methods"
+      var pattern= new RegExp("about")
+      p.innerHTML+= "<br>" + pattern.test(str1) 
+    </script>
+</body>
+</html>

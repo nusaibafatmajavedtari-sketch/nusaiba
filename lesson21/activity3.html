@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="h2"></h2>
+    <script>
+        var day
+        const h= document.getElementById("h2")
+        var num = new Date ().getDay()
+        h.innerHTML = num
+        // day number - thursday - 4 
+
+        switch (num){
+            case 0 :
+                day="sunday"
+                break
+
+                case 1 : 
+                 day= "monday"
+                 break
+
+                 case 2 :
+                    day="Tuesday"
+                
+        }
+    </script>
+</body>
+</html>
