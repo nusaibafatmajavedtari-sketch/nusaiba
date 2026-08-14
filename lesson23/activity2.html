@@ -1,0 +1,58 @@
+<!--
+1) Start the HTML document with `<!DOCTYPE html>` and open `<html>`.
+
+2) Inside the `<body>`:
+
+3) Add headings:
+   a) `<h2>` with text: "JavaScript Array Methods"
+   b) `<h2>` with text: "join() and pop()"
+
+4) Add a paragraph explaining the methods:
+   a) join() converts array elements into a single string.
+   b) pop() removes the last element from an array.
+
+5) Create three empty paragraphs to display outputs:
+   a) `<p id="myjoin"></p>` for join() output
+   b) `<p id="myfirstpop"></p>` for the array before pop()
+   c) `<p id="mysecondpop"></p>` for the array after pop()
+
+6) Add a `<script>` tag to write JavaScript.
+
+7) Inside the `<script>` tag:
+   a) Create an array named `fruits` with values: Banana, Orange, Apple, Mango.
+   b) Use `fruits.join(" * ")` and display it inside `"myjoin"`.
+   c) Display the original array inside `"myfirstpop"`.
+   d) Use `fruits.pop()` to remove the last element.
+   e) Display the updated array inside `"mysecondpop"`.
+
+8) Close all tags properly.
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript array methods </h2>
+    <h2>Join() and pop () </h2>
+    <p>join() coverts array elements into a single string </p>
+    <p>pop() removes the last element from an array</p>
+    <p id="myjoin"></p>
+    <p id="myfirstpop"></p>
+    <p id="mysecondpop"></p>
+    <script>
+        var fruits= ['banana', 'orange', 'apple', 'mango'];
+        document.getElementById("myjoin").innerHTML= fruits.join("*")
+        document.getElementById("myfirstpop").innerHTML= fruits 
+        fruits.pop()
+        document.getElementById("mysecondpop").innerHTML= fruits
+    </script>
+</body>
+</html> 
