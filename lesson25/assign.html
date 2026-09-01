@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Birthday</h1>
+        <p>Birthday after days!</p>
+        <button onclick="checkBirthday()">Check birthday countdown</button>
+        <p id="days"></p>
+        <p id="result"></p>
+    
+    </div>
+    <script>
+         function checkBirthday() {
+
+      let birthdayGift = null;
+      let birthdayPlan;
+
+      const studentName = "Sarah";
+      const birthdayMonth = 8;
+      const birthdayDate = 15;
+
+
+      let countdownText = "Waiting...";
+
+      let today = new Date();
+      let currentYear = today.getFullYear();
+
+
+      let birthday = new Date(2026, 10 - 1, 6);
+
+
+      if (birthday < today) {
+        birthday = new Date(2026 + 1, 10 - 1, 6);
+      }
+
+     let timeDifference = birthday - today;
+      let daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+        document.getElementById("days").innerHTML= "Days left: " + daysLeft + "<br>";
+
+        let message;
+         if (daysLeft === 0 ) {
+            message = 'happy birthday';
+        } else if (daysLeft<= 7){
+          message= " your birthday is almost there";
+        } 
+        else { 
+           message=  "keep counting";
+        }
+
+          let finalMessage = "Student Name: " + studentName + "<br>";
+      finalMessage = finalMessage + "Today's Date: " + today.toDateString() + "<br>";
+      finalMessage = finalMessage + "Birthday Date: " + birthday.toDateString() + "<br>";
+      finalMessage = finalMessage + "Message: " + message + "<br><br>";
+
+
+      finalMessage = finalMessage + "Birthday Gift: " + birthdayGift + "<br>";
+      finalMessage = finalMessage + "Birthday Plan: " + birthdayPlan;
+
+
+      document.getElementById("days").innerHTML = daysLeft;
+      document.getElementById("result").innerHTML = finalMessage;
+
+         let day = 1;
+
+       while (day <= 5) {
+        countdownText = countdownText + "Countdown check " + day;
+        countdownText = countdownText + ": Birthday loading...<br>";
+        day++;
+      }
+
+
+      document.getElementById("countdown").innerHTML = countdownText;
+    
+
+    }
+      
+    </script>
+</body>
+</html>
