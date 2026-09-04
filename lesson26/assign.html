@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+ .card {
+background: white;
+border: 3px solid blue;
+border-radius: 12px;
+padding: 20px;
+width: 200px;
+}
+
+    </style>
+    <h1>Superhero cards</h1>
+    <button onclick="showSuperhero()">Click to see Superheros!</button>
+    <div id="card1"></div>
+    <div id="card2"></div>
+    <div id="card3"></div>
+    <script>
+        class Superhero{ 
+             constructor(name,fact){
+         this.name= name;
+         this.fact= fact;
+             }  describe(){
+        return this.name + ":" + this.fact;
+            }
+        }
+
+        function showSuperhero(){
+    let s1= new Superhero("Spider-man", "got bitten by a radioactive spider");
+    let s2= new Superhero("Batman", " The city needs me");
+    let s3= new Superhero("Superman","Kryptomine");
+
+
+     document.getElementById("card1").innerHTML=
+    "<div class='card'><div class='Superhero-name'>" + s1.name + "</div>" + 
+    "<div class='Superhero-fact'>" + s1.describe() + "<div></div>";
+
+     document.getElementById("card2").innerHTML=
+    "<div class='card'><div class='Superhero-name'>" + s2.name + "</div>" + 
+    "<div class='Superhero-fact'>" + s2.describe() + "<div></div>";
+
+     document.getElementById("card3").innerHTML=
+    "<div class='card'><div class='Superhero-name'>" + s3.name + "</div>" + 
+    "<div class='Superhero-fact'>" + s3.describe() + "<div></div>";
+
+        }
+    </script>
+</body>
+</html>
