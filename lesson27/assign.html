@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 class="mb-1">Task Sorter</h1>
+
+<p class="text-muted mb-4">Sort and label task list using JavaScript array methods!</p>
+<div class="card mb-4">
+<div class="card-body">
+<h3 class="card-title">Task Names</h3>
+<button class="btn btn-primary mr-2" onclick="sortAZ()">Sort A to Z</button>
+<button class="btn btn-primary" onclick="sortZA()">Sort Z to A</button>
+
+<div id="nameResult" class="box p-3 mt-3 rounded"></div>
+</div>
+</div>
+
+<div class="card mb-4">
+
+<div class="card-body">
+
+<h3 class="card-title">minutes count</h3>
+<button class="btn btn-primary mr-2" onclick="sortLeast()">Least Done First</button>
+
+<button onclick="sortMost()">Most Done First</button>
+<div id="countResult" class="box p-3 mt-3 rounded"></div>
+
+</div>
+</div>
+
+<div class="card mb-4">
+
+<div class="card-body">
+<h3 class="card-title">Label Every minute Counts</h3>
+
+<button onclick="addLabel()">Add minutes Label</button>
+<div id="labelResult" class="box p-3 mt-3 rounded"></div>
+</div>
+</div>
+</div>
+
+  <script>
+    var task= ["study", "clean", "play", "workout"];
+    var minutes= [120, 60, 30, 45];
+    function sortAZ() {task.sort(); document.getElementById("nameResult").innerHTML= "A-Z: " + task;}
+    function sortZA() {task.sort(); task.reverse(); document.getElementById("nameResult").innerHTML= "Z-A: " + task;}
+function sortLeast(){minutes.sort(function(a,b){return a-b;}) ;document.getElementById("countResult").innerHTML= "least done first: " + task + "; time given: "+ minutes;}
+function sortMost(){minutes.sort(function(a,b){return b-a;}) ;document.getElementById("countResult").innerHTML= "Most done first: " + task + "; time given:"+ minutes;}
+function addLabel(){var l = minutes.map (function(c){return c+ "minutes";}); document.getElementById("labelResult").innerHTML= "Labelled: " + minutes;}
+  </script>
+</body>
+</html>
