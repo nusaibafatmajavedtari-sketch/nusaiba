@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Text fixer tool</h1>
+<p>Discover types, switch them, find and swap words, and catch errors!</p>
+
+<h3>What Type Is It?</h3>
+<button onclick="checkTypes()">Reveal the Types</button>
+<div id="typeResult">Press the button to reveal the secret types!</div>
+<h3 class="card-title">Switch the Type</h3>
+
+<input id="numIn" placeholder="Type any number here (try: 50)">
+<button onclick="toStr()">Turn into Text</button>
+<button onclick="toNum()">Turn into Number</button>
+<div id="convResult">Type a number above then press a button!</div>
+<h3 class="card-title">Find and Swap a Word</h3>
+
+<input id="findW" placeholder="Word to find (try: cow)">
+<input id="swapW" placeholder="Swap it with (try: hamster)">
+<button onclick="doSearch()">Find It!</button>
+<button onclick="doReplace()">Swap It!</button>
+<div id="srResult">Sentence: "the cow jumped over the moon."</div>
+<h3>Catch the Mistake</h3>
+<input id="divIn" placeholder="Divide 100 by this — try a number or type something silly!">
+<button onclick="trySafe()">Try It!</button>
+<div id="errResult">Type a number or something silly and see what happens</div>
+
+    <script>
+        var sent = "the cow jumped over the moon"
+function checkTypes(){
+    var name= "sam";
+    var score= 50;
+    var timeOver= true;
+    document.getElementById("typeResult").innerText=
+    "score 50  - type: " + typeof 50 + "\n" +
+    "name 'sam'  - type: " + typeof "sam" + "\n" +
+    "time over true  - type: " + typeof true;
+}
+function toStr(){
+    var v = document.getElementById("numIn").value;
+    document.getElementById("convResult").innerHTML= "String(" + v + ")='"+ String(v) + "' - now it is a: " + typeof String(v);
+
+}
+
+function toNum(){
+     var v = document.getElementById("numIn").value;
+    document.getElementById("convResult").innerHTML= "Number(" + v + ")='"+ Number(v) + "' - now it is a: " + typeof Number(v);
+}
+
+function doSearch(){
+    var w = document.getElementById("findW").value;
+    var p = sent.search(w);
+    document.getElementById("srResult").innerHTML= p=== -1 ? "'" + w + "' is not in the sentence - try another word! " : "Found '" + w + "' hiding at position" + p
+
+}
+
+function doReplace(){
+    var w = document.getElementById("findW").value;
+    document.getElementById("srResult").innerHTML= "New sentence: " + sent.replace( w, document.getElementById("swapW").value);
+
+}
+
+function trySafe(){
+    try{
+        var n = document.getElementById("divIn").value;
+        if (n=== "" || isNaN(n)) {
+            throw "That is not a number - you caught the error!";
+        
+        document.getElementById("errorResult").innerHTML= "100/ " + n + "=" + (100 / Number(n)) + "-well done!";}
+
+    } catch (err){
+        document.getElementById("errResult").innerHTML= "Error caught:" + err;
+    }
+    
+}
+
+    </script>
+</body>
+</html>
