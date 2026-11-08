@@ -35,4 +35,4 @@ temp = price_a
 price_a = price_b
 price_b = temp
 
-print("After:", price_b, "and", price_a)
+print("After:", price_a, "and", price_b)
